@@ -25,11 +25,11 @@ This file maps the independent demonstrator to the advertised tasks without clai
 
 - **7/7 pytest tests passed**.
 - Nominal closed-loop residual RMS: open loop **0.9426**, integrator **0.3536**, linear predictor **0.3053**, safe MLP **0.3266**.
-- Nominal MLP controller-call p95 latency: **0.0756 ms** on the local validation environment.
+- Nominal safe-ML controller-call p95 latency: **0.0373 ms** on the validated Mac run.
 - Distribution-shift benchmark reused the baseline-trained predictive artifacts; all four controller paths remained numerically stable.
 - In the deliberately simple mostly linear synthetic plant, the linear predictor outperformed the MLP. This is treated as an informative baseline result, not hidden or tuned away.
 
-Latency values are environment-specific software-call timings and **must not** be described as METIS RTC latency or hard-real-time performance.
+Latency values are machine-specific Python software-call timings and **must not** be described as METIS RTC latency or hard-real-time performance.
 
 ## Safe application wording
 
