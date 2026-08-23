@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/*.h5
+models/*.pt
+models/*.npz
+models/*.json
+results/*.json
+results/*.md
+results/*.sqlite3
+results/*/*.png
+*.egg-info/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.DS_Store

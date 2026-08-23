@@ -1,0 +1,15 @@
+name: predictive-ao-control
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pyyaml
+  - h5py
+  - matplotlib
+  - pytorch
+  - pytest
+  - pip
+  - pip:
+      - ruff
+      - mypy

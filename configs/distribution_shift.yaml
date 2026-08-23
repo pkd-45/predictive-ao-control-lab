@@ -1,0 +1,20 @@
+seed: 20260824
+n_modes: 12
+sequence_length: 280
+train_sequences: 24
+val_sequences: 6
+test_sequences: 8
+history: 6
+atmosphere:
+  rho: 0.86
+  process_sigma: 0.42
+  coupling: 0.08
+wfs_noise_sigma: 0.09
+actuator_limit: 3.5
+integrator_gain: 0.45
+latency_budget_ms: 15.0
+training:
+  hidden: 48
+  epochs: 28
+  batch_size: 128
+  learning_rate: 0.003

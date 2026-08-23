@@ -1,0 +1,25 @@
+PREDICTIVE_AO_CONTROL_LAB_V0.1.0
+DATE=2026-08-23
+TESTS=7/7 PASS
+COMPILEALL=PASS
+NOMINAL_RESULTS:
+# baseline benchmark
+
+| Controller | Residual RMS | Strehl proxy | p95 latency (ms) | Fallbacks | Stable |
+|---|---:|---:|---:|---:|:---:|
+| open_loop | 0.9426 | 0.4112 | 0.0003 | 0 | yes |
+| integrator | 0.3536 | 0.8825 | 0.0030 | 0 | yes |
+| linear_predictor | 0.3053 | 0.9110 | 0.0078 | 0 | yes |
+| ml_safe | 0.3266 | 0.8988 | 0.0756 | 0 | yes |
+
+SHIFTED_RESULTS_BASELINE_MODELS_FROZEN:
+# shifted benchmark
+
+| Controller | Residual RMS | Strehl proxy | p95 latency (ms) | Fallbacks | Stable |
+|---|---:|---:|---:|---:|:---:|
+| open_loop | 0.8603 | 0.4771 | 0.0003 | 0 | yes |
+| integrator | 0.4852 | 0.7902 | 0.0030 | 0 | yes |
+| linear_predictor | 0.4336 | 0.8286 | 0.0080 | 0 | yes |
+| ml_safe | 0.4464 | 0.8193 | 0.0555 | 0 | yes |
+
+SCOPE=independent synthetic AO software/control demonstrator; not METIS/ELT production software
