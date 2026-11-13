@@ -52,6 +52,17 @@ Outputs are written to `results/`, with model artifacts in `models/`, datasets i
 - safety-fallback count;
 - stability flag.
 
-## Application-safe description
+## Validation summary
 
-> In response to an adaptive-optics/RTC software role, I built an independent synthetic control demonstrator that separates offline ML training from an RTC-like inference path and compares a PyTorch predictive controller with classical and linear baselines. The software records closed-loop residual error and inference latency, applies numerical/actuator/latency safety checks, and falls back to a deterministic controller when ML output is invalid. I benchmarked both nominal and distribution-shift regimes and packaged the workflow with configuration-driven data generation, automated tests, SHA-256 model provenance and a SQLite benchmark record. It is deliberately a simplified software/control demonstrator rather than a model of the METIS RTC.
+The benchmark compares an ML predictive controller with classical integrator
+and ridge-predictive baselines in a deliberately simplified closed-loop
+simulation. Offline training is separate from online inference, and the
+ML path has a deterministic fallback for invalid or out-of-range outputs.
+
+Reference experiments include nominal and shifted disturbance regimes,
+numerical quality checks, latency measurements and recorded model provenance.
+The linear predictor outperformed the MLP in the measured nominal reference
+configuration; ML is not assumed to be the preferred controller.
+
+See [technical capabilities](docs/CAPABILITIES.md) and
+[validation evidence](docs/VALIDATION_RESULT_2026-08-23.md).
